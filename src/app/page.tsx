@@ -114,14 +114,18 @@ export default function Home() {
 
       <main className="flex-1">
         <section id="introduction" className="container mx-auto px-4 py-16 text-center flex flex-col items-center">
-          <Image
-            src="https://placehold.co/200x200.png"
-            alt="Un retrato de la autora del blog"
-            width={160}
-            height={160}
-            className="rounded-full mb-6 ring-4 ring-primary/50 p-1"
-            data-ai-hint="fashion portrait"
-          />
+          <div className="relative mb-6">
+            <div className="w-40 h-40 rounded-full p-1 bg-gradient-to-br from-primary to-accent shadow-lg">
+              <Image
+                src="https://placehold.co/200x200.png"
+                alt="Un retrato de la autora del blog"
+                width={160}
+                height={160}
+                className="rounded-full w-full h-full object-cover"
+                data-ai-hint="fashion portrait"
+              />
+            </div>
+          </div>
           <h2 className="text-4xl md:text-5xl font-headline mb-4 relative">
             ¡Bienvenida a mi mundo!
             <span className="absolute text-5xl opacity-10 rotate-12 -top-4 -right-8 select-none">✨</span>
