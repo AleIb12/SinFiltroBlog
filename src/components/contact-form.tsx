@@ -19,15 +19,15 @@ import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: "El nombre debe tener al menos 2 caracteres.",
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: "Por favor, introduce una dirección de correo electrónico válida.",
   }),
   message: z.string().min(10, {
-    message: "Message must be at least 10 characters.",
+    message: "El mensaje debe tener al menos 10 caracteres.",
   }).max(500, {
-    message: "Message must be less than 500 characters."
+    message: "El mensaje debe tener menos de 500 caracteres."
   }),
 });
 
@@ -50,8 +50,8 @@ export function ContactForm() {
     console.log(values);
     
     toast({
-      title: "Message Sent! 💌",
-      description: "Thanks for reaching out! I'll get back to you soon.",
+      title: "¡Mensaje Enviado! 💌",
+      description: "¡Gracias por contactar! Te responderé pronto.",
     });
 
     form.reset();
@@ -65,9 +65,9 @@ export function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Nombre</FormLabel>
               <FormControl>
-                <Input placeholder="Your name" {...field} />
+                <Input placeholder="Tu nombre" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -80,7 +80,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="your@email.com" {...field} />
+                <Input placeholder="tu@email.com" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -91,10 +91,10 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>Mensaje</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Tell me what's on your mind..."
+                  placeholder="Cuéntame qué tienes en mente..."
                   className="resize-none"
                   rows={5}
                   {...field}
@@ -109,7 +109,7 @@ export function ContactForm() {
           className="w-full bg-accent text-accent-foreground hover:bg-accent/90 focus-visible:ring-accent"
           disabled={form.formState.isSubmitting}
         >
-          {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+          {form.formState.isSubmitting ? "Enviando..." : "Enviar Mensaje"}
         </Button>
       </form>
     </Form>

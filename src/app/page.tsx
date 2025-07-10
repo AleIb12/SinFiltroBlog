@@ -10,60 +10,60 @@ import { ContactForm } from "@/components/contact-form";
 const blogPosts = {
   skincare: [
     {
-      title: "My Holy Grail Skincare Routine",
-      description: "The products that saved my skin and why I can't live without them.",
+      title: "Mi Rutina de Skincare Indispensable",
+      description: "Los productos que salvaron mi piel y por qué no puedo vivir sin ellos.",
       image: "https://placehold.co/600x400.png",
       aiHint: "skincare routine",
     },
     {
-      title: "10-Minute Morning Glow-Up",
-      description: "How to look radiant and ready for the day in just 10 minutes.",
+      title: "Look Radiante en 10 Minutos por la Mañana",
+      description: "Cómo lucir radiante y lista para el día en solo 10 minutos.",
       image: "https://placehold.co/600x400.png",
       aiHint: "skincare product",
     },
     {
-      title: "The Truth About Viral Serums",
-      description: "Are they worth the hype? I tried them so you don't have to.",
+      title: "La Verdad Sobre los Sérums Virales",
+      description: "¿Valen la pena? Los probé para que tú no tengas que hacerlo.",
       image: "https://placehold.co/600x400.png",
       aiHint: "serum bottle",
     },
   ],
   fashion: [
     {
-      title: "How I Find Hidden Gems in Thrift Stores",
-      description: "My secrets to thrifting like a pro and finding unique pieces.",
+      title: "Cómo Encuentro Joyas Ocultas en Tiendas de Segunda Mano",
+      description: "Mis secretos para comprar como una profesional y encontrar piezas únicas.",
       image: "https://placehold.co/600x400.png",
       aiHint: "fashion style",
     },
     {
-      title: "Building a Capsule Wardrobe",
-      description: "Less is more. How to create a versatile wardrobe that you'll love.",
+      title: "Creando un Armario Cápsula",
+      description: "Menos es más. Cómo crear un armario versátil que te encantará.",
       image: "https://placehold.co/600x400.png",
       aiHint: "closet clothes",
     },
     {
-      title: "Accessory Trends I'm Loving Right Now",
-      description: "From statement earrings to layered necklaces, here's what's hot.",
+      title: "Tendencias de Accesorios que me Encantan Ahora",
+      description: "Desde pendientes llamativos hasta collares en capas, esto es lo que se lleva.",
       image: "https://placehold.co/600x400.png",
       aiHint: "fashion accessories",
     },
   ],
   party: [
     {
-      title: "The Ultimate Pre-Party Playlist",
-      description: "Get in the mood with these tracks that are guaranteed to start the party.",
+      title: "La Playlist Definitiva para la Pre-Fiesta",
+      description: "Ponte en ambiente con estos temas que garantizan el inicio de la fiesta.",
       image: "https://placehold.co/600x400.png",
       aiHint: "dj turntable",
     },
     {
-      title: "From Desk to Dancefloor: Quick Makeup",
-      description: "Transform your look from work-appropriate to party-ready in a flash.",
+      title: "Del Escritorio a la Pista de Baile: Maquillaje Rápido",
+      description: "Transforma tu look de trabajo a uno de fiesta en un instante.",
       image: "https://placehold.co/600x400.png",
       aiHint: "makeup palette",
     },
     {
-      title: "Navigating the Social Scene",
-      description: "Tips and tricks for having the best night out, every time.",
+      title: "Navegando la Escena Social",
+      description: "Consejos y trucos para tener la mejor noche, siempre.",
       image: "https://placehold.co/600x400.png",
       aiHint: "party people",
     },
@@ -71,12 +71,12 @@ const blogPosts = {
 };
 
 const galleryImages = [
-  { src: "https://placehold.co/600x400.png", alt: "Stylish outfit of the day", aiHint: "fashion style" },
-  { src: "https://placehold.co/600x400.png", alt: "Aesthetic flatlay of skincare products", aiHint: "skincare flatlay" },
-  { src: "https://placehold.co/600x400.png", alt: "A vibrant cocktail at a rooftop bar", aiHint: "cocktail drink" },
-  { src: "https://placehold.co/600x400.png", alt: "Candid moment with friends at a party", aiHint: "party friends" },
-  { src: "https://placehold.co/600x400.png", alt: "Close-up of a trendy accessory", aiHint: "fashion accessory" },
-  { src: "https://placehold.co/600x400.png", alt: "Morning coffee and journal", aiHint: "lifestyle coffee" },
+  { src: "https://placehold.co/600x400.png", alt: "Atuendo del día con estilo", aiHint: "fashion style" },
+  { src: "https://placehold.co/600x400.png", alt: "Composición estética de productos de skincare", aiHint: "skincare flatlay" },
+  { src: "https://placehold.co/600x400.png", alt: "Un cóctel vibrante en un bar de azotea", aiHint: "cocktail drink" },
+  { src: "https://placehold.co/600x400.png", alt: "Momento espontáneo con amigos en una fiesta", aiHint: "party friends" },
+  { src: "https://placehold.co/600x400.png", alt: "Primer plano de un accesorio de moda", aiHint: "fashion accessory" },
+  { src: "https://placehold.co/600x400.png", alt: "Café matutino y diario", aiHint: "lifestyle coffee" },
 ];
 
 export default function Home() {
@@ -92,26 +92,26 @@ export default function Home() {
         <section id="introduction" className="container mx-auto px-4 py-16 text-center flex flex-col items-center">
           <Image
             src="https://placehold.co/200x200.png"
-            alt="A portrait of the blog author"
+            alt="Un retrato de la autora del blog"
             width={160}
             height={160}
             className="rounded-full mb-6 ring-4 ring-primary/50 p-1"
             data-ai-hint="fashion portrait"
           />
-          <h2 className="text-4xl md:text-5xl font-headline mb-4">Welcome to my world!</h2>
+          <h2 className="text-4xl md:text-5xl font-headline mb-4">¡Bienvenida a mi mundo!</h2>
           <p className="max-w-3xl mx-auto text-lg text-foreground/80">
-            Dive into the unfiltered life of skincare obsessions, fashion dramas, and unforgettable party nights. This is my space to share it all, with a little bit of sass and a lot of style.
+            Sumérgete en la vida sin filtros de obsesiones con el skincare, dramas de moda y noches de fiesta inolvidables. Este es mi espacio para compartirlo todo, con un poco de descaro y mucho estilo.
           </p>
         </section>
 
         <section id="blog" className="py-16 bg-card/50">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-headline text-center mb-12">The Latest Posts</h2>
+            <h2 className="text-4xl font-headline text-center mb-12">Las Últimas Entradas</h2>
             <Tabs defaultValue="skincare" className="w-full">
               <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto h-auto mb-8">
                 <TabsTrigger value="skincare" className="py-2.5"><Droplets className="mr-2 h-4 w-4" />Skincare</TabsTrigger>
-                <TabsTrigger value="fashion" className="py-2.5"><Shirt className="mr-2 h-4 w-4" />Fashion</TabsTrigger>
-                <TabsTrigger value="party" className="py-2.5"><PartyPopper className="mr-2 h-4 w-4" />Party</TabsTrigger>
+                <TabsTrigger value="fashion" className="py-2.5"><Shirt className="mr-2 h-4 w-4" />Moda</TabsTrigger>
+                <TabsTrigger value="party" className="py-2.5"><PartyPopper className="mr-2 h-4 w-4" />Fiesta</TabsTrigger>
               </TabsList>
               
               {(['skincare', 'fashion', 'party'] as const).map(category => (
@@ -135,7 +135,7 @@ export default function Home() {
                         </CardContent>
                         <CardFooter className="p-6 pt-0">
                           <Button asChild variant="link" className="p-0 h-auto text-primary hover:text-accent">
-                            <Link href="#">Read More &rarr;</Link>
+                            <Link href="#">Leer Más &rarr;</Link>
                           </Button>
                         </CardFooter>
                       </Card>
@@ -149,7 +149,7 @@ export default function Home() {
 
         <section id="gallery" className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-headline text-center mb-12">Photo Gallery</h2>
+            <h2 className="text-4xl font-headline text-center mb-12">Galería de Fotos</h2>
             <Carousel opts={{ loop: true }} className="w-full max-w-4xl mx-auto">
               <CarouselContent>
                 {galleryImages.map((image, index) => (
@@ -179,9 +179,9 @@ export default function Home() {
         
         <section id="contact" className="py-16 bg-card/50">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-headline text-center mb-4">Get In Touch</h2>
+            <h2 className="text-4xl font-headline text-center mb-4">Ponte en Contacto</h2>
             <p className="text-center max-w-2xl mx-auto text-foreground/80 mb-8">
-              Have a question, a collaboration idea, or just want to say hi? Drop me a line!
+              ¿Tienes una pregunta, una idea para colaborar o simplemente quieres saludar? ¡Escríbeme!
             </p>
             <div className="max-w-xl mx-auto">
               <Card className="shadow-lg">
@@ -202,10 +202,10 @@ export default function Home() {
           </Link>
         </div>
         <p className="text-sm text-foreground/60 flex items-center justify-center gap-1.5">
-          Made with <Heart className="h-4 w-4 text-primary" /> by a fellow enthusiast.
+          Hecho con <Heart className="h-4 w-4 text-primary" /> por una entusiasta como tú.
         </p>
         <p className="text-xs text-foreground/50 mt-2">
-          &copy; {new Date().getFullYear()} Sin Filtro. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Sin Filtro. Todos los derechos reservados.
         </p>
       </footer>
     </div>
