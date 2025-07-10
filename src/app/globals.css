@@ -84,15 +84,21 @@
 
   .bg-background {
     background:
+      linear-gradient(to bottom, hsl(var(--background)), hsl(var(--primary) / 0.1));
+    background-image:
       linear-gradient(to bottom, hsl(var(--background)), hsl(var(--primary) / 0.1)),
-      radial-gradient(circle at 1px 1px, hsl(var(--border)) 1px, transparent 0);
-    background-size: 2rem 2rem;
+      linear-gradient(hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 100% 100%, 2rem 2rem, 2rem 2rem;
   }
 
   .dark .bg-background {
      background:
+      linear-gradient(to bottom, hsl(var(--background)), hsl(var(--primary) / 0.1));
+    background-image:
       linear-gradient(to bottom, hsl(var(--background)), hsl(var(--primary) / 0.1)),
-      radial-gradient(circle at 1px 1px, hsl(var(--border) / 0.5) 1px, transparent 0);
-    background-size: 2rem 2rem;
+      linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
+      linear-gradient(to right, hsl(var(--border) / 0.5) 1px, transparent 1px);
+    background-size: 100% 100%, 2rem 2rem, 2rem 2rem;
   }
 }
