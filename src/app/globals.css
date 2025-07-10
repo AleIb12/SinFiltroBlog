@@ -94,6 +94,18 @@
     overflow-x: clip; /* Prevents horizontal scroll from the sticker */
   }
 
+  .bg-background::before {
+    content: '👗';
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    font-size: 8rem;
+    line-height: 1;
+    z-index: 0;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+  }
+
   .bg-background::after {
     content: '💖';
     position: absolute;
@@ -117,7 +129,8 @@
     background-size: 100% 100%, 2rem 2rem, 2rem 2rem;
   }
   
-  .dark .bg-background::after {
+  .dark .bg-background::after,
+  .dark .bg-background::before {
     opacity: 0.05;
   }
 }
