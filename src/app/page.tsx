@@ -142,7 +142,7 @@ export default function Home() {
                 <TabsContent key={category} value={category}>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts[category].map((post, index) => (
-                      <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card/80 backdrop-blur-sm">
+                      <Card key={index} className="overflow-hidden bg-card/60 backdrop-blur-sm border-border/20 shadow-sm hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 flex flex-col">
                         <CardHeader className="p-0">
                           <Image
                             src={post.image}
@@ -179,7 +179,7 @@ export default function Home() {
                 {galleryImages.map((image, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
-                      <Card className="overflow-hidden">
+                      <Card className="overflow-hidden bg-card/60 backdrop-blur-sm border-border/20 shadow-sm hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300">
                         <CardContent className="flex aspect-square items-center justify-center p-0">
                           <Image
                             src={image.src}
@@ -209,7 +209,7 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {monthlyFavorites.map((item, index) => (
-                <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card/80 backdrop-blur-sm">
+                <Card key={index} className="overflow-hidden bg-card/60 backdrop-blur-sm border-border/20 shadow-sm hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 flex flex-col">
                   <CardHeader className="p-0">
                     <Image
                       src={item.image}
