@@ -6,7 +6,7 @@
   :root {
     --background: 28 67% 94%;
     --foreground: 28 10% 20%;
-    --card: 0 0% 100%;
+    --card: 28 67% 96%;
     --card-foreground: 28 10% 20%;
     --popover: 0 0% 100%;
     --popover-foreground: 28 10% 20%;
@@ -79,6 +79,20 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+  }
+
+  .bg-background {
+    background:
+      linear-gradient(to bottom, hsl(var(--background)), hsl(var(--primary) / 0.1)),
+      radial-gradient(circle at 1px 1px, hsl(var(--border)) 1px, transparent 0);
+    background-size: 2rem 2rem;
+  }
+
+  .dark .bg-background {
+     background:
+      linear-gradient(to bottom, hsl(var(--background)), hsl(var(--primary) / 0.1)),
+      radial-gradient(circle at 1px 1px, hsl(var(--border) / 0.5) 1px, transparent 0);
+    background-size: 2rem 2rem;
   }
 }

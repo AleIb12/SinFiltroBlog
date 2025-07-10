@@ -82,7 +82,7 @@ const galleryImages = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
-      <header className="py-8 px-4 md:px-8 bg-background/80 backdrop-blur-sm sticky top-0 z-40">
+      <header className="py-8 px-4 md:px-8 bg-transparent backdrop-blur-sm sticky top-0 z-40">
         <h1 className="text-4xl md:text-5xl font-headline text-center text-primary tracking-wider">
           Sin Filtro
         </h1>
@@ -104,7 +104,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id="blog" className="py-16 bg-card/50">
+        <section id="blog" className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-headline text-center mb-12">Las Últimas Entradas</h2>
             <Tabs defaultValue="skincare" className="w-full">
@@ -118,7 +118,7 @@ export default function Home() {
                 <TabsContent key={category} value={category}>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts[category].map((post, index) => (
-                      <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                      <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card/80 backdrop-blur-sm">
                         <CardHeader className="p-0">
                           <Image
                             src={post.image}
@@ -177,14 +177,14 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="contact" className="py-16 bg-card/50">
+        <section id="contact" className="py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-headline text-center mb-4">Ponte en Contacto</h2>
             <p className="text-center max-w-2xl mx-auto text-foreground/80 mb-8">
               ¿Tienes una pregunta, una idea para colaborar o simplemente quieres saludar? ¡Escríbeme!
             </p>
             <div className="max-w-xl mx-auto">
-              <Card className="shadow-lg">
+              <Card className="shadow-lg bg-card/80 backdrop-blur-sm">
                 <CardContent className="p-6 md:p-8">
                   <ContactForm />
                 </CardContent>
