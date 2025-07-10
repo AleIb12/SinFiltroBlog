@@ -83,6 +83,7 @@
   }
 
   .bg-background {
+    position: relative;
     background:
       linear-gradient(to bottom, hsl(var(--background)), hsl(var(--primary) / 0.1));
     background-image:
@@ -90,7 +91,21 @@
       linear-gradient(hsl(var(--border)) 1px, transparent 1px),
       linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px);
     background-size: 100% 100%, 2rem 2rem, 2rem 2rem;
+    overflow-x: clip; /* Prevents horizontal scroll from the sticker */
   }
+
+  .bg-background::after {
+    content: '💖';
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    font-size: 8rem;
+    line-height: 1;
+    z-index: 0;
+    opacity: 0.1;
+    transform: rotate(15deg);
+  }
+
 
   .dark .bg-background {
      background:
@@ -100,5 +115,9 @@
       linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
       linear-gradient(to right, hsl(var(--border) / 0.5) 1px, transparent 1px);
     background-size: 100% 100%, 2rem 2rem, 2rem 2rem;
+  }
+  
+  .dark .bg-background::after {
+    opacity: 0.05;
   }
 }
