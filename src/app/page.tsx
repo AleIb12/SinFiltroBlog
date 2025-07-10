@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Droplets, Shirt, PartyPopper, Heart } from "lucide-react";
+import { Instagram, Droplets, Shirt, PartyPopper, Heart, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ContactForm } from "@/components/contact-form";
 
 const blogPosts = {
   skincare: [
@@ -78,6 +77,31 @@ const galleryImages = [
   { src: "https://placehold.co/600x400.png", alt: "Primer plano de un accesorio de moda", aiHint: "fashion accessory" },
   { src: "https://placehold.co/600x400.png", alt: "Café matutino y diario", aiHint: "lifestyle coffee" },
 ];
+
+const monthlyFavorites = [
+  {
+    title: "Sérum Iluminador con Vitamina C",
+    description: "Este sérum ha cambiado mi piel. Le da un brillo increíble y huele a cítricos frescos.",
+    image: "https://placehold.co/600x600.png",
+    aiHint: "serum bottle",
+    link: "#",
+  },
+  {
+    title: "Pendientes de Aro Dorados",
+    description: "Simples, elegantes y van con todo. Han sido mi accesorio de confianza este mes.",
+    image: "https://placehold.co/600x600.png",
+    aiHint: "gold earrings",
+    link: "#",
+  },
+  {
+    title: "Paleta de Sombras 'Sunset'",
+    description: "Los tonos cálidos de esta paleta son perfectos para looks de día y de noche.",
+    image: "https://placehold.co/600x600.png",
+    aiHint: "eyeshadow palette",
+    link: "#",
+  },
+];
+
 
 export default function Home() {
   return (
@@ -177,18 +201,39 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="contact" className="py-16">
+        <section id="favorites" className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-headline text-center mb-4">Ponte en Contacto</h2>
-            <p className="text-center max-w-2xl mx-auto text-foreground/80 mb-8">
-              ¿Tienes una pregunta, una idea para colaborar o simplemente quieres saludar? ¡Escríbeme!
+            <h2 className="text-4xl font-headline text-center mb-4">Mis Favoritos del Mes</h2>
+            <p className="text-center max-w-2xl mx-auto text-foreground/80 mb-12">
+              Una selección de los productos que he estado amando y usando sin parar este último mes.
             </p>
-            <div className="max-w-xl mx-auto">
-              <Card className="shadow-lg bg-card/80 backdrop-blur-sm">
-                <CardContent className="p-6 md:p-8">
-                  <ContactForm />
-                </CardContent>
-              </Card>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {monthlyFavorites.map((item, index) => (
+                <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col bg-card/80 backdrop-blur-sm">
+                  <CardHeader className="p-0">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      width={600}
+                      height={600}
+                      className="w-full h-60 object-cover"
+                      data-ai-hint={item.aiHint}
+                    />
+                  </CardHeader>
+                  <CardContent className="p-6 flex-grow">
+                    <CardTitle className="font-headline text-2xl mb-2 flex items-center gap-2">
+                      <Sparkles className="h-6 w-6 text-accent" />
+                      {item.title}
+                    </CardTitle>
+                    <CardDescription>{item.description}</CardDescription>
+                  </CardContent>
+                  <CardFooter className="p-6 pt-0">
+                    <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                      <Link href={item.link}>Comprar Ahora</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
