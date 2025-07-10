@@ -244,7 +244,7 @@ export default function Home() {
                     <CardDescription>{item.description}</CardDescription>
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
-                    <Button asChild className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+                    <Button asChild variant="outline" className="w-full border-2 border-dashed bg-transparent hover:bg-accent hover:text-accent-foreground hover:border-accent">
                       <Link href={item.link}>Comprar Ahora</Link>
                     </Button>
                   </CardFooter>
