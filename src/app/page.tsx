@@ -122,7 +122,10 @@ export default function Home() {
             className="rounded-full mb-6 ring-4 ring-primary/50 p-1"
             data-ai-hint="fashion portrait"
           />
-          <h2 className="text-4xl md:text-5xl font-headline mb-4">¡Bienvenida a mi mundo! ✨</h2>
+          <h2 className="text-4xl md:text-5xl font-headline mb-4 relative">
+            ¡Bienvenida a mi mundo!
+            <span className="absolute text-5xl opacity-10 rotate-12 -top-4 -right-8 select-none">✨</span>
+          </h2>
           <p className="max-w-3xl mx-auto text-lg text-foreground/80">
             Sumérgete en la vida sin filtros de obsesiones con el skincare, dramas de moda y noches de fiesta inolvidables. Este es mi espacio para compartirlo todo, con un poco de descaro y mucho estilo.
           </p>
@@ -130,7 +133,10 @@ export default function Home() {
 
         <section id="blog" className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-headline text-center mb-12">Las Últimas Entradas ✍️</h2>
+            <h2 className="text-4xl font-headline text-center mb-12 relative">
+              Las Últimas Entradas
+              <span className="absolute text-5xl opacity-10 -rotate-12 -top-4 -left-8 select-none">✍️</span>
+            </h2>
             <Tabs defaultValue="skincare" className="w-full">
               <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto h-auto mb-8">
                 <TabsTrigger value="skincare" className="py-2.5"><Droplets className="mr-2 h-4 w-4" />Skincare</TabsTrigger>
@@ -173,7 +179,10 @@ export default function Home() {
 
         <section id="gallery" className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-headline text-center mb-12">Galería de Fotos 📸</h2>
+            <h2 className="text-4xl font-headline text-center mb-12 relative">
+              Galería de Fotos
+               <span className="absolute text-5xl opacity-10 rotate-12 -top-4 -right-8 select-none">📸</span>
+            </h2>
             <Carousel opts={{ loop: true }} className="w-full max-w-4xl mx-auto">
               <CarouselContent>
                 {galleryImages.map((image, index) => (
@@ -203,7 +212,10 @@ export default function Home() {
         
         <section id="favorites" className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-headline text-center mb-4">Mis Favoritos del Mes 💖</h2>
+            <h2 className="text-4xl font-headline text-center mb-4 relative">
+              Mis Favoritos del Mes
+              <span className="absolute text-5xl opacity-10 -rotate-12 -top-4 -left-8 select-none">💖</span>
+            </h2>
             <p className="text-center max-w-2xl mx-auto text-foreground/80 mb-12">
               Una selección de los productos que he estado amando y usando sin parar este último mes.
             </p>
