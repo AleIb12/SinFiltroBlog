@@ -119,7 +119,7 @@ export default function Home() {
       <main className="flex-1">
         <section id="introduction" className="container mx-auto px-4 py-16 text-center flex flex-col items-center">
           <div className="relative mb-6">
-            <div className="w-40 h-40 rounded-full p-1 bg-gradient-to-br from-primary to-accent shadow-lg">
+            <div className="w-40 h-40 rounded-full p-2 border-2 border-dashed border-primary shadow-lg">
               <Image
                 src="https://placehold.co/200x200.png"
                 alt="Un retrato de la autora del blog"
