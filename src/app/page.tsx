@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Droplets, Shirt, PartyPopper, Heart, Sparkles } from "lucide-react";
+import { Instagram, Droplets, Shirt, PartyPopper, Heart, Sparkles, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { ContactForm } from "@/components/contact-form";
 
 const blogPosts = {
   skincare: [
@@ -256,18 +257,23 @@ export default function Home() {
 
       </main>
 
-      <footer className="py-8 text-center border-t border-border/50 mt-16">
-        <div className="flex justify-center gap-6 mb-4">
-          <Link href="#" className="text-foreground hover:text-primary transition-colors" aria-label="Instagram">
-            <Instagram className="h-6 w-6" />
-          </Link>
+      <footer className="py-12 mt-16">
+        <div className="container mx-auto flex justify-center">
+            <div className="bg-card/60 backdrop-blur-sm border-2 border-dashed border-foreground/20 rounded-lg px-8 py-6 text-center">
+                <h3 className="font-headline text-2xl text-primary mb-2">Sin Filtro</h3>
+                <div className="flex justify-center gap-6 my-4">
+                    <Link href="#" className="text-foreground hover:text-primary transition-colors" aria-label="Instagram">
+                        <Instagram className="h-6 w-6" />
+                    </Link>
+                </div>
+                <p className="text-sm text-foreground/60 flex items-center justify-center gap-1.5">
+                    Hecho con <Heart className="h-4 w-4 text-primary" /> por una entusiasta como tú.
+                </p>
+                <p className="text-xs text-foreground/50 mt-4">
+                    &copy; {new Date().getFullYear()} Todos los derechos reservados.
+                </p>
+            </div>
         </div>
-        <p className="text-sm text-foreground/60 flex items-center justify-center gap-1.5">
-          Hecho con <Heart className="h-4 w-4 text-primary" /> por una entusiasta como tú.
-        </p>
-        <p className="text-xs text-foreground/50 mt-2">
-          &copy; {new Date().getFullYear()} Sin Filtro. Todos los derechos reservados.
-        </p>
       </footer>
     </div>
   );
