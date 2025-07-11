@@ -108,6 +108,43 @@ const monthlyFavorites = [
 ];
 
 
+const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+  </svg>
+);
+
+const TelegramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M22 2 11 13H2l2.3-6.9L22 2zm-3 15-3-3-2 2 4 4 4-4-2-2-3 3z"></path>
+    <path d="m22 2-7 20-4-9-9-4Z"></path>
+    <path d="M11.5 12.5 22 2"></path>
+  </svg>
+);
+
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -286,6 +323,12 @@ export default function Home() {
                 <div className="flex justify-center gap-6 my-4">
                     <Link href="#" className="text-foreground hover:text-primary transition-colors" aria-label="Instagram">
                         <Instagram className="h-6 w-6" />
+                    </Link>
+                    <Link href="#" className="text-foreground hover:text-primary transition-colors" aria-label="Whatsapp">
+                        <WhatsappIcon className="h-6 w-6" />
+                    </Link>
+                    <Link href="#" className="text-foreground hover:text-primary transition-colors" aria-label="Telegram">
+                        <TelegramIcon className="h-6 w-6" />
                     </Link>
                 </div>
                 <p className="text-sm text-foreground/60 flex items-center justify-center gap-1.5">
