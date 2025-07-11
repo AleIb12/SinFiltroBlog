@@ -126,23 +126,22 @@ const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const TelegramIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    {...props}
-  >
-    <path d="M22 2 11 13H2l2.3-6.9L22 2zm-3 15-3-3-2 2 4 4 4-4-2-2-3 3z"></path>
-    <path d="m22 2-7 20-4-9-9-4Z"></path>
-    <path d="M11.5 12.5 22 2"></path>
-  </svg>
-);
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="m22 2-7 20-4-9-9-4 20-7z"></path>
+      <path d="M22 2 11 13"></path>
+    </svg>
+  );
 
 
 export default function Home() {
