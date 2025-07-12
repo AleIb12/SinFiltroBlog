@@ -1,14 +1,56 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Sin Filtro Blog',
-  description: 'Blog personal de Alisha Ibarra Bello sobre skincare, moda y vida nocturna. Viviendo sin filtros con mucho estilo.',
-  keywords: ['blog', 'skincare', 'moda', 'fiesta', 'beauty', 'lifestyle', 'Alisha Ibarra'],
-  authors: [{ name: 'Alisha Ibarra Bello' }],
+  title: {
+    default: 'Sin Filtro Blog - Alisha Ibarra Bello',
+    template: '%s | Sin Filtro Blog'
+  },
+  description: 'Blog personal de Alisha Ibarra Bello sobre skincare, moda y vida nocturna. Viviendo sin filtros con mucho estilo. Descubre rutinas de belleza, tendencias de moda y tips de fiesta.',
+  keywords: ['blog', 'skincare', 'moda', 'fiesta', 'beauty', 'lifestyle', 'Alisha Ibarra', 'belleza', 'cuidado facial', 'tendencias', 'vida nocturna'],
+  authors: [{ name: 'Alisha Ibarra Bello', url: 'https://instagram.com/ali.ibarrabello' }],
   creator: 'Alisha Ibarra Bello',
   publisher: 'Alisha Ibarra Bello',
+  category: 'lifestyle',
+  classification: 'Blog Personal',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_ES',
+    url: 'https://sinfiltroblogue.vercel.app',
+    title: 'Sin Filtro Blog - Alisha Ibarra Bello',
+    description: 'Blog personal sobre skincare, moda y vida nocturna. Viviendo sin filtros con mucho estilo.',
+    siteName: 'Sin Filtro Blog',
+    images: [
+      {
+        url: '/apple-touch-icon.png',
+        width: 180,
+        height: 180,
+        alt: 'Sin Filtro Blog - Alisha Ibarra Bello',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sin Filtro Blog - Alisha Ibarra Bello',
+    description: 'Blog personal sobre skincare, moda y vida nocturna. Viviendo sin filtros con mucho estilo.',
+    creator: '@ali.ibarrabello',
+    images: ['/apple-touch-icon.png'],
+  },
+  alternates: {
+    canonical: 'https://sinfiltroblogue.vercel.app',
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -25,6 +67,10 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
+  other: {
+    'msapplication-TileColor': '#FF69B4',
+    'theme-color': '#FF69B4',
+  },
 };
 
 export default function RootLayout({

@@ -386,3 +386,52 @@
     background: radial-gradient(circle, hsl(var(--primary) / 0.02) 0%, transparent 50%);
   }
 }
+
+/* Optimizaciones de rendimiento */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Lazy loading para imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimización de fuentes */
+.font-display-swap {
+  font-display: swap;
+}
+
+/* Optimización de animaciones */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Will-change para elementos animados */
+.animate-background {
+  will-change: background-position;
+}
+
+.animate-float {
+  will-change: transform;
+}
+
+.animate-sparkle {
+  will-change: opacity;
+}

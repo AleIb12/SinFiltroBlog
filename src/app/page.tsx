@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Droplets, Shirt, PartyPopper, Heart, Sparkles, Send, ChevronDown, ChevronUp } from "lucide-react";
@@ -11,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { LoadingScreen } from "@/components/loading-screen";
+import { generateBlogSchema, generatePersonSchema, generateWebsiteSchema } from "@/lib/schema";
 
 const blogPosts = {
   skincare: [
@@ -419,48 +420,48 @@ const blogPosts = {
 };
 
 const galleryMoments = [
-  { 
-    title: "Atuendo del Día", 
+  {
+    title: "Atuendo del Día",
     category: "fashion",
     description: "Looks que me hacen sentir increíble",
     icon: "outfit",
     gradient: "from-pink-400 to-purple-400",
     emoji: "👗"
   },
-  { 
-    title: "Skincare Routine", 
+  {
+    title: "Skincare Routine",
     category: "skincare",
     description: "Momentos de autocuidado y relajación",
     icon: "skincare",
     gradient: "from-blue-400 to-cyan-400",
     emoji: "🧴"
   },
-  { 
-    title: "Night Out", 
+  {
+    title: "Night Out",
     category: "party",
     description: "Noches épicas con mis mejores amigas",
     icon: "party",
     gradient: "from-purple-400 to-pink-400",
     emoji: "🍸"
   },
-  { 
-    title: "Momentos Espontáneos", 
+  {
+    title: "Momentos Espontáneos",
     category: "lifestyle",
     description: "La vida real, sin filtros ni poses",
     icon: "lifestyle",
     gradient: "from-orange-400 to-red-400",
     emoji: "✨"
   },
-  { 
-    title: "Fashion Details", 
+  {
+    title: "Fashion Details",
     category: "fashion",
     description: "Accesorios que hacen la diferencia",
     icon: "accessories",
     gradient: "from-yellow-400 to-orange-400",
     emoji: "💎"
   },
-  { 
-    title: "Me Time", 
+  {
+    title: "Me Time",
     category: "lifestyle",
     description: "Café, journaling y momentos conmigo",
     icon: "coffee",
@@ -506,22 +507,22 @@ const WhatsappIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const TelegramIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="m22 2-7 20-4-9-9-4 20-7z"></path>
-      <path d="M22 2 11 13"></path>
-    </svg>
-  );
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="m22 2-7 20-4-9-9-4 20-7z"></path>
+    <path d="M22 2 11 13"></path>
+  </svg>
+);
 
 
 export default function Home() {
@@ -546,16 +547,16 @@ export default function Home() {
   if (isLoading) {
     return <LoadingScreen />;
   }
-  
+
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
       <header className="py-8 px-4 md:px-8 bg-transparent backdrop-blur-sm sticky top-0 z-40">
         <div className="container mx-auto">
-            <div className="bg-card/60 backdrop-blur-sm border-2 border-dashed border-foreground/20 rounded-lg py-4 text-center">
-                <h1 className="text-4xl md:text-5xl font-headline text-center text-primary tracking-wider">
-                  Sin Filtro
-                </h1>
-            </div>
+          <div className="bg-card/60 backdrop-blur-sm border-2 border-dashed border-foreground/20 rounded-lg py-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-headline text-center text-primary tracking-wider">
+              Sin Filtro
+            </h1>
+          </div>
         </div>
       </header>
 
@@ -566,7 +567,7 @@ export default function Home() {
             <div className="relative w-48 h-48 mx-auto mb-6">
               {/* Círculo exterior decorativo */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 animate-pulse"></div>
-              
+
               {/* Círculo interior principal */}
               <div className="absolute inset-2 rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20 backdrop-blur-sm border-2 border-dashed border-primary/50">
                 <div className="absolute inset-4 rounded-full bg-gradient-to-br from-card via-card/90 to-card/80 backdrop-blur-sm border border-dashed border-accent/30 flex items-center justify-center">
@@ -581,7 +582,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Elementos decorativos flotantes */}
               <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center animate-bounce">
                 <Sparkles className="w-4 h-4 text-white" />
@@ -590,9 +591,9 @@ export default function Home() {
                 <Heart className="w-3 h-3 text-white" />
               </div>
               <div className="absolute top-4 -left-6 w-4 h-4 rounded-full bg-gradient-to-br from-accent/60 to-primary/60 animate-ping"></div>
-              <div className="absolute bottom-8 -right-6 w-5 h-5 rounded-full bg-gradient-to-br from-primary/60 to-accent/60 animate-ping" style={{animationDelay: '1s'}}></div>
+              <div className="absolute bottom-8 -right-6 w-5 h-5 rounded-full bg-gradient-to-br from-primary/60 to-accent/60 animate-ping" style={{ animationDelay: '1s' }}></div>
             </div>
-            
+
             {/* Elementos decorativos adicionales */}
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
               <div className="flex items-center gap-2 text-primary/30">
@@ -602,7 +603,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
+
           <h2 className="text-4xl md:text-5xl font-headline mb-6 relative">
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               ¡Bienvenida a mi mundo!
@@ -610,16 +611,16 @@ export default function Home() {
             <span className="absolute text-5xl opacity-10 rotate-12 -top-4 -right-8 select-none">✨</span>
             <span className="absolute text-3xl opacity-10 -rotate-12 -bottom-2 -left-6 select-none">💖</span>
           </h2>
-          
+
           <div className="max-w-3xl mx-auto mb-8">
             <p className="text-lg text-foreground/80 leading-relaxed mb-4">
-              Sumérgete en la vida sin filtros de obsesiones con el skincare, dramas de moda y noches de fiesta inolvidables. 
+              Sumérgete en la vida sin filtros de obsesiones con el skincare, dramas de moda y noches de fiesta inolvidables.
             </p>
             <p className="text-base text-foreground/70 italic">
               Este es mi espacio para compartirlo todo, con un poco de descaro y mucho estilo.
             </p>
           </div>
-          
+
           {/* Badges decorativos */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <div className="px-4 py-2 bg-gradient-to-r from-primary/10 to-accent/10 border border-dashed border-primary/30 rounded-full text-sm font-medium text-primary">
@@ -635,7 +636,7 @@ export default function Home() {
               Night Life
             </div>
           </div>
-          
+
           {/* Línea decorativa final */}
           <div className="flex items-center justify-center gap-4 opacity-40">
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
@@ -656,14 +657,14 @@ export default function Home() {
                 <TabsTrigger value="fashion" className="py-2.5"><Shirt className="mr-2 h-4 w-4" />Moda</TabsTrigger>
                 <TabsTrigger value="party" className="py-2.5"><PartyPopper className="mr-2 h-4 w-4" />Fiesta</TabsTrigger>
               </TabsList>
-              
+
               {(['skincare', 'fashion', 'party'] as const).map(category => (
                 <TabsContent key={category} value={category}>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts[category].map((post, index) => {
                       const articleId = `${category}-${index}`;
                       const isOpen = openArticles[articleId];
-                      
+
                       return (
                         <Card key={index} className="group overflow-hidden bg-gradient-to-br from-card via-card/80 to-card/40 backdrop-blur-sm border-2 border-dashed border-foreground/10 shadow-sm hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 flex flex-col relative">
                           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -678,11 +679,11 @@ export default function Home() {
                           </CardHeader>
                           <CardContent className="p-6 pt-2 flex-grow relative z-10">
                             <CardDescription className="text-base leading-relaxed">{post.description}</CardDescription>
-                            
+
                             <Collapsible open={isOpen} onOpenChange={() => toggleArticle(articleId)}>
                               <CollapsibleContent className="mt-4 overflow-hidden">
                                 <div className="border-t border-dashed border-primary/20 pt-4">
-                                  <div 
+                                  <div
                                     className="article-content text-foreground space-y-4"
                                     dangerouslySetInnerHTML={{ __html: post.fullContent }}
                                   />
@@ -723,14 +724,14 @@ export default function Home() {
             <p className="text-center max-w-2xl mx-auto text-foreground/80 mb-12">
               Cada momento cuenta una historia. Aquí un vistazo a mi mundo sin filtros.
             </p>
-            
+
             <Carousel opts={{ loop: true, align: "start" }} className="w-full max-w-6xl mx-auto">
               <CarouselContent className="-ml-4">
                 {galleryMoments.map((moment, index) => (
                   <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                     <Card className="group overflow-hidden bg-gradient-to-br from-card via-card/90 to-card/60 backdrop-blur-sm border-2 border-dashed border-foreground/10 shadow-sm hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 h-80">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      
+
                       <CardContent className="p-0 h-full flex flex-col relative">
                         {/* Header con gradiente temático */}
                         <div className={`h-32 bg-gradient-to-br ${moment.gradient} relative overflow-hidden`}>
@@ -743,12 +744,12 @@ export default function Home() {
                               </div>
                             </div>
                           </div>
-                          
+
                           {/* Elementos decorativos */}
                           <div className="absolute top-3 right-3 w-6 h-6 rounded-full bg-white/20 backdrop-blur-sm"></div>
                           <div className="absolute bottom-3 left-3 w-4 h-4 rounded-full bg-white/30 backdrop-blur-sm"></div>
                         </div>
-                        
+
                         {/* Contenido principal */}
                         <div className="p-6 flex-1 flex flex-col justify-between relative z-10">
                           <div>
@@ -759,7 +760,7 @@ export default function Home() {
                               {moment.category === 'lifestyle' && <Sparkles className="w-5 h-5 text-primary" />}
                               <div className="flex-1 h-px bg-gradient-to-r from-primary/30 to-transparent"></div>
                             </div>
-                            
+
                             <h3 className="font-headline text-lg mb-2 group-hover:text-primary transition-colors duration-300">
                               {moment.title}
                             </h3>
@@ -767,7 +768,7 @@ export default function Home() {
                               {moment.description}
                             </p>
                           </div>
-                          
+
                           {/* Badge inferior */}
                           <div className="mt-4 flex items-center justify-between">
                             <div className="px-3 py-1 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full text-xs font-medium text-primary border border-dashed border-primary/20">
@@ -781,12 +782,12 @@ export default function Home() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              
+
               {/* Controles personalizados */}
               <CarouselPrevious className="text-primary hover:bg-primary/10 hover:text-primary border-2 border-dashed border-primary/20 hover:border-primary/40 -left-12" />
               <CarouselNext className="text-primary hover:bg-primary/10 hover:text-primary border-2 border-dashed border-primary/20 hover:border-primary/40 -right-12" />
             </Carousel>
-            
+
             {/* Indicadores adicionales */}
             <div className="flex justify-center mt-8 gap-2">
               {galleryMoments.map((_, index) => (
@@ -796,7 +797,7 @@ export default function Home() {
                 ></div>
               ))}
             </div>
-            
+
             {/* Texto final */}
             <div className="text-center mt-8">
               <p className="text-sm text-foreground/60 italic">
@@ -805,7 +806,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
+
         <section id="favorites" className="py-16 floating-shapes-alt">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-headline text-center mb-4 relative">
@@ -865,28 +866,48 @@ export default function Home() {
 
       <footer className="py-12 mt-16">
         <div className="container mx-auto flex justify-center">
-            <div className="bg-card/60 backdrop-blur-sm border-2 border-dashed border-foreground/20 rounded-lg px-8 py-6 text-center">
-                <h3 className="font-headline text-2xl text-primary mb-2">Sin Filtro</h3>
-                <div className="flex justify-center gap-6 my-4">
-                    <Link href="https://instagram.com/ali.ibarrabello" className="text-foreground hover:text-primary transition-colors" aria-label="Instagram">
-                        <Instagram className="h-6 w-6" />
-                    </Link>
-                    <Link href="https://wa.me/692616005" className="text-foreground hover:text-primary transition-colors" aria-label="Whatsapp">
-                        <WhatsappIcon className="h-6 w-6" />
-                    </Link>
-                    <Link href="https://t.me/Alisha_Ibarra" className="text-foreground hover:text-primary transition-colors" aria-label="Telegram">
-                        <TelegramIcon className="h-6 w-6" />
-                    </Link>
-                </div>
-                <p className="text-sm text-foreground/60 flex items-center justify-center gap-1.5">
-                    Hecho con <Heart className="h-4 w-4 text-primary" /> por una entusiasta como tú.
-                </p>
-                <p className="text-xs text-foreground/50 mt-4">
-                    &copy; {new Date().getFullYear()} Todos los derechos reservados.
-                </p>
+          <div className="bg-card/60 backdrop-blur-sm border-2 border-dashed border-foreground/20 rounded-lg px-8 py-6 text-center">
+            <h3 className="font-headline text-2xl text-primary mb-2">Sin Filtro</h3>
+            <div className="flex justify-center gap-6 my-4">
+              <Link href="https://instagram.com/ali.ibarrabello" className="text-foreground hover:text-primary transition-colors" aria-label="Instagram">
+                <Instagram className="h-6 w-6" />
+              </Link>
+              <Link href="https://wa.me/692616005" className="text-foreground hover:text-primary transition-colors" aria-label="Whatsapp">
+                <WhatsappIcon className="h-6 w-6" />
+              </Link>
+              <Link href="https://t.me/Alisha_Ibarra" className="text-foreground hover:text-primary transition-colors" aria-label="Telegram">
+                <TelegramIcon className="h-6 w-6" />
+              </Link>
             </div>
+            <p className="text-sm text-foreground/60 flex items-center justify-center gap-1.5">
+              Hecho con <Heart className="h-4 w-4 text-primary" /> por una entusiasta como tú.
+            </p>
+            <p className="text-xs text-foreground/50 mt-4">
+              &copy; {new Date().getFullYear()} Todos los derechos reservados.
+            </p>
+          </div>
         </div>
       </footer>
+
+      {/* Schema JSON-LD para SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateBlogSchema()),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generatePersonSchema()),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateWebsiteSchema()),
+        }}
+      />
     </div>
   );
 }
