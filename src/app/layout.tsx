@@ -7,8 +7,8 @@ export const metadata: Metadata = {
     default: 'Sin Filtro Blog - Alisha Ibarra Bello',
     template: '%s | Sin Filtro Blog'
   },
-  description: 'Blog personal de Alisha Ibarra Bello sobre skincare, moda y vida nocturna. Viviendo sin filtros con mucho estilo. Descubre rutinas de belleza, tendencias de moda y tips de fiesta.',
-  keywords: ['blog', 'skincare', 'moda', 'fiesta', 'beauty', 'lifestyle', 'Alisha Ibarra', 'belleza', 'cuidado facial', 'tendencias', 'vida nocturna'],
+  description: 'Blog personal de Alisha Ibarra Bello sobre skincare, moda y vida nocturna. Descubre mi rutina con productos Caudalie Paris Vinopure, tendencias de moda y tips de fiesta. Viviendo sin filtros con mucho estilo.',
+  keywords: ['blog', 'skincare', 'moda', 'fiesta', 'beauty', 'lifestyle', 'Alisha Ibarra', 'belleza', 'cuidado facial', 'tendencias', 'vida nocturna', 'Caudalie Paris', 'Vinopure', 'ácido salicílico', 'rutina skincare', 'piel acneica'],
   authors: [{ name: 'Alisha Ibarra Bello', url: 'https://instagram.com/ali.ibarrabello' }],
   creator: 'Alisha Ibarra Bello',
   publisher: 'Alisha Ibarra Bello',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     locale: 'es_ES',
     url: 'https://sinfiltroblogue.vercel.app',
     title: 'Sin Filtro Blog - Alisha Ibarra Bello',
-    description: 'Blog personal sobre skincare, moda y vida nocturna. Viviendo sin filtros con mucho estilo.',
+    description: 'Blog personal sobre skincare, moda y vida nocturna. Descubre mi rutina con productos Caudalie Paris Vinopure. Viviendo sin filtros con mucho estilo.',
     siteName: 'Sin Filtro Blog',
     images: [
       {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sin Filtro Blog - Alisha Ibarra Bello',
-    description: 'Blog personal sobre skincare, moda y vida nocturna. Viviendo sin filtros con mucho estilo.',
+    description: 'Blog personal sobre skincare, moda y vida nocturna. Descubre mi rutina con productos Caudalie Paris Vinopure. Viviendo sin filtros con mucho estilo.',
     creator: '@ali.ibarrabello',
     images: ['/apple-touch-icon.png'],
   },

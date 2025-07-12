@@ -17,17 +17,44 @@ Un blog personal elegante y moderno enfocado en skincare, moda y vida nocturna. 
 ## 🎯 Secciones del Blog
 
 ### 📝 Categorías de Posts
+
 - **Skincare**: Rutinas, productos y consejos de cuidado facial
 - **Moda**: Tendencias, compras y estilo personal
 - **Fiesta**: Vida nocturna, playlist y tips de fiesta
 
+### 🧴 Rutina de Skincare Personal
+
+La rutina de skincare de Alisha está centrada en productos **Caudalie Paris** de la línea **Vinopure**:
+
+**Mañana y Noche:**
+
+- **Gel Limpiador Purificante Vinopure**: Formulado con ácido salicílico natural, aceites esenciales orgánicos y agua de uva. Ideal para pieles con tendencia acneica, reduce el exceso de sebo sin resecar.
+- **Tónico Purificante Vinopure**: Con ácido salicílico natural para cerrar poros, disminuir imperfecciones y conservar la luminosidad.
+
+**Rutina Nocturna:**
+
+- **Sérum Salicílico Anti-imperfecciones**: Combina ácido salicílico natural, niacinamida y polifenoles para tratar imperfecciones y mejorar la textura de la piel.
+
+_Productos recomendados basados en experiencia personal con pieles con tendencia acneica._
+
+### 💄 Contenido de Beauty
+
+El blog incluye artículos detallados sobre:
+
+- **Rutinas de cuidado personal**: Paso a paso con productos específicos
+- **Looks express**: Cómo lucir radiante en solo 10 minutos
+- **Tips de maquillaje**: Consejos prácticos para el día a día
+- **Reseñas honestas**: Experiencias reales con productos de belleza
+
 ### 🖼️ Galería de Momentos
+
 - Tarjetas temáticas con gradientes personalizados
 - Íconos y emojis representativos para cada categoría
 - Carousel interactivo con controles elegantes
 - Diseño sin imágenes externas pero visualmente atractivo
 
 ### 💖 Favoritos del Mes
+
 - Productos recomendados con diseño especial
 - Enlaces directos de compra
 - Sistema de calificación visual
@@ -46,10 +73,12 @@ Un blog personal elegante y moderno enfocado en skincare, moda y vida nocturna. 
 ## 🛠️ Instalación y Desarrollo
 
 ### Prerrequisitos
-- Node.js 18+ 
+
+- Node.js 18+
 - npm o yarn
 
 ### Instalación
+
 ```bash
 # Clonar el repositorio
 git clone https://github.com/AleIb12/SinFiltroBlog.git
@@ -65,6 +94,7 @@ npm run dev
 ```
 
 ### Scripts Disponibles
+
 ```bash
 # Desarrollo con Turbopack
 npm run dev
@@ -89,16 +119,19 @@ npm run typecheck
 ## 🎨 Guía de Estilo
 
 ### Colores Principales
+
 - **Primario**: Rosa vibrante (#FF69B4) - Personalidad divertida y energética
 - **Fondo**: Rosa muy claro (#FAF0E4) - Atmósfera suave e invitadora
 - **Acento**: Coral (#FF8071) - Botones de acción y destacados
 - **Texto**: Variaciones de gris para legibilidad óptima
 
 ### Tipografía
+
 - **Títulos**: 'Belleza' (sans-serif) - Personalidad en títulos
 - **Cuerpo**: 'PT Sans' (sans-serif) - Legibilidad y sensación moderna
 
 ### Componentes de Diseño
+
 - Bordes punteados para un look casual
 - Gradientes sutiles en las cartas
 - Efectos de hover interactivos
@@ -115,6 +148,7 @@ npm run typecheck
 ## 🚀 Características Técnicas
 
 ### Rendimiento
+
 - **Turbopack**: Desarrollo rápido con hot reload
 - **Optimización de imágenes**: Next.js Image component con formatos modernos (AVIF, WebP)
 - **Lazy Loading**: Carga diferida de contenido y componentes
@@ -127,6 +161,7 @@ npm run typecheck
 - **Critical CSS**: Estilos críticos inline para primera carga
 
 ### SEO Optimizado
+
 - **Meta Tags Completos**: Title, description, keywords, author
 - **Open Graph**: Integración completa para redes sociales
 - **Twitter Cards**: Metadatos optimizados para Twitter
@@ -139,6 +174,7 @@ npm run typecheck
 - **Core Web Vitals**: Optimizado para métricas de Google
 
 ### Accesibilidad
+
 - **ARIA Labels**: Etiquetas descriptivas para screen readers
 - **Keyboard Navigation**: Navegación completa por teclado
 - **Screen Reader**: Compatible con lectores de pantalla
@@ -172,6 +208,7 @@ SinFiltroBlog/
 ## 🎪 Características Especiales
 
 ### Cartas Rediseñadas
+
 - **Sin Imágenes**: Diseño hermoso usando solo elementos CSS
 - **Iconos Temáticos**: Diferentes iconos para cada categoría
 - **Gradientes**: Fondos con gradientes sutiles
@@ -180,6 +217,7 @@ SinFiltroBlog/
 - **Contenido Expandible**: Desplegables con información completa de cada artículo
 
 ### Galería de Momentos
+
 - **Tarjetas Temáticas**: Cada momento tiene su propia identidad visual
 - **Gradientes Personalizados**: Colores únicos para cada categoría
 - **Íconos Dinámicos**: Representaciones visuales de cada tipo de contenido
@@ -187,12 +225,15 @@ SinFiltroBlog/
 - **Emojis Contextuales**: Elementos divertidos que complementan el tema
 
 ### Avatar Personalizado
-- **Iniciales Elegantes**: "AIB" con tipografía exclusiva
+
+- **Imagen Chibi**: Avatar personalizado con estilo anime kawaii
 - **Círculos Concéntricos**: Diseño en capas con gradientes
 - **Elementos Flotantes**: Sparkles y corazones animados
-- **Badges Temáticos**: Identificadores para cada área de expertise
+- **Overlay Elegante**: Texto "Sin Filtro" superpuesto sutilmente
+- **Optimización**: Carga prioritaria con Next.js Image component
 
 ### Interactividad
+
 - **Hover Effects**: Transformaciones y cambios de color
 - **Micro-animaciones**: Movimientos sutiles en botones y elementos
 - **Loading Screen**: Pantalla de carga con animación
@@ -225,4 +266,4 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ---
 
-*Hecho con 💖 por Alisha Ibarra Bello - Una entusiasta que vive sin filtros*
+_Hecho con 💖 por Alisha Ibarra Bello - Una entusiasta que vive sin filtros_
