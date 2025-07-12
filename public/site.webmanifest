@@ -1,0 +1,26 @@
+{
+  "name": "Sin Filtro Blog",
+  "short_name": "Sin Filtro",
+  "description": "Blog personal de Alisha Ibarra Bello sobre skincare, moda y vida nocturna",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFB6C1",
+  "theme_color": "#FF69B4",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
