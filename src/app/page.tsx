@@ -570,13 +570,21 @@ export default function Home() {
 
               {/* Círculo interior principal */}
               <div className="absolute inset-2 rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20 backdrop-blur-sm border-2 border-dashed border-primary/50">
-                <div className="absolute inset-4 rounded-full bg-gradient-to-br from-card via-card/90 to-card/80 backdrop-blur-sm border border-dashed border-accent/30 flex items-center justify-center">
-                  {/* Iniciales elegantes */}
-                  <div className="text-center">
-                    <div className="text-4xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                      AIB
-                    </div>
-                    <div className="text-xs text-primary/70 font-medium tracking-widest uppercase">
+                <div className="absolute inset-4 rounded-full bg-gradient-to-br from-card via-card/90 to-card/80 backdrop-blur-sm border border-dashed border-accent/30 flex items-center justify-center overflow-hidden">
+                  {/* Avatar chibi */}
+                  <div className="w-full h-full flex items-center justify-center">
+                    <Image
+                      src="/chibi.png"
+                      alt="Alisha Ibarra Bello - Avatar Chibi"
+                      width={120}
+                      height={120}
+                      className="rounded-full object-cover w-full h-full"
+                      priority
+                    />
+                  </div>
+                  {/* Overlay sutil con nombre */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-2 text-center">
+                    <div className="text-xs text-white font-medium tracking-wider uppercase">
                       Sin Filtro
                     </div>
                   </div>
@@ -663,7 +671,7 @@ export default function Home() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogPosts[category].map((post, index) => {
                       const articleId = `${category}-${index}`;
-                      const isOpen = openArticles[articleId];
+                      const isOpen = openArticles[articleId] ?? false;
 
                       return (
                         <Card key={index} className="group overflow-hidden bg-gradient-to-br from-card via-card/80 to-card/40 backdrop-blur-sm border-2 border-dashed border-foreground/10 shadow-sm hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 flex flex-col relative">
