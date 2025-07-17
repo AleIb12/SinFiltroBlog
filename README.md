@@ -13,6 +13,10 @@ Un blog personal elegante y moderno enfocado en skincare, moda y vida nocturna. 
 - 🌈 **Paleta de Colores Vibrante**: Rosa vibrante con acentos coral
 - 💫 **Componentes Interactivos**: Hover effects y animaciones micro-interactivas
 - 🔗 **Integración Social**: Enlaces a redes sociales (Instagram, WhatsApp, Telegram)
+- 📖 **Contenido Expandible**: Artículos completos con sistema de desplegables (collapsibles)
+- 💖 **Favoritos Interactivos**: Sección de productos favoritos con desplegables detallados
+- 🛍️ **Enlaces de Compra**: Integración con Amazon y otros retailers
+- 🎯 **Favicon SVG**: Favicon personalizado kawaii optimizado para todas las resoluciones
 
 ## 🎯 Secciones del Blog
 
@@ -52,23 +56,62 @@ El blog incluye artículos detallados sobre:
 - Íconos y emojis representativos para cada categoría
 - Carousel interactivo con controles elegantes
 - Diseño sin imágenes externas pero visualmente atractivo
+- Momentos categorizados: Atuendo del Día, Skincare Routine, Night Out, Momentos Espontáneos, Fashion Details, Me Time
+
+## 🎯 Secciones del Blog
+
+### � Categorías de Posts
+
+- **Skincare**: Rutinas, productos y consejos de cuidado facial
+- **Moda**: Tendencias, compras y estilo personal
+- **Fiesta**: Vida nocturna, playlist y tips de fiesta
+
+### 🧴 Rutina de Skincare Personal
+
+La rutina de skincare de Alisha está centrada en productos **Caudalie Paris** de la línea **Vinopure**:
+
+**Mañana y Noche:**
+
+- **Gel Limpiador Purificante Vinopure**: Formulado con ácido salicílico natural, aceites esenciales orgánicos y agua de uva. Ideal para pieles con tendencia acneica, reduce el exceso de sebo sin resecar.
+- **Tónico Purificante Vinopure**: Con ácido salicílico natural para cerrar poros, disminuir imperfecciones y conservar la luminosidad.
+
+**Rutina Nocturna:**
+
+- **Sérum Salicílico Anti-imperfecciones**: Combina ácido salicílico natural, niacinamida y polifenoles para tratar imperfecciones y mejorar la textura de la piel.
+
+_Productos recomendados basados en experiencia personal con pieles con tendencia acneica._
+
+### 💄 Contenido de Beauty
+
+El blog incluye artículos detallados sobre:
+
+- **Rutinas de cuidado personal**: Paso a paso con productos específicos
+- **Looks express**: Cómo lucir radiante en solo 10 minutos
+- **Tips de maquillaje**: Consejos prácticos para el día a día
+- **Reseñas honestas**: Experiencias reales con productos de belleza
 
 ### 💖 Favoritos del Mes
 
-- Productos recomendados con diseño especial
-- Enlaces directos de compra
-- Sistema de calificación visual
+- **NYX Professional Makeup – Fat Oil Lip Drip**: Aceite labial hidratante con 12 horas de duración
+- **L'Oréal Paris – Spray Fijador de Maquillaje Infaillible**: Fijador resistente hasta 36 horas
+- **Paleta de Sombras 'Sunset'**: Tonos cálidos perfectos para día y noche
+- **Sistema de Desplegables**: Cada producto tiene información detallada expandible
+- **Enlaces de Compra**: Integración con Amazon y otros retailers
+- **Reseñas Auténticas**: Experiencias reales con productos probados
 
 ## 🚀 Stack Tecnológico
 
-- **Framework**: Next.js 15.3.3
+- **Framework**: Next.js 15.3.3 con App Router
 - **Styling**: Tailwind CSS + shadcn/ui
 - **Iconos**: Lucide React
-- **Componentes**: Radix UI primitives
+- **Componentes**: Radix UI primitives (Collapsible, Tabs, Carousel)
 - **Animaciones**: Tailwind CSS + CSS transitions
 - **Carousel**: Embla Carousel React
-- **Tipado**: TypeScript
+- **Tipado**: TypeScript con modo estricto
 - **Fonts**: Google Fonts (Belleza + PT Sans)
+- **Favicon**: SVG optimizado para Next.js 13+
+- **Optimización**: Turbopack para desarrollo rápido
+- **AI Integration**: Google Genkit para funcionalidades futuras
 
 ## 🛠️ Instalación y Desarrollo
 
@@ -189,20 +232,41 @@ SinFiltroBlog/
 ├── src/
 │   ├── app/
 │   │   ├── globals.css      # Estilos globales
-│   │   ├── layout.tsx       # Layout principal
-│   │   └── page.tsx         # Página principal
+│   │   ├── layout.tsx       # Layout principal con metadata completa
+│   │   ├── page.tsx         # Página principal con contenido auténtico
+│   │   ├── icon.svg         # Favicon SVG kawaii
+│   │   └── sitemap.ts       # Generación de sitemap
 │   ├── components/
-│   │   ├── ui/              # Componentes de UI reutilizables
+│   │   ├── ui/              # Componentes de UI reutilizables (shadcn/ui)
+│   │   │   ├── collapsible.tsx  # Componente para desplegables
+│   │   │   ├── tabs.tsx         # Componente de pestañas
+│   │   │   ├── carousel.tsx     # Componente de carrusel
+│   │   │   └── ...              # Otros componentes UI
 │   │   ├── contact-form.tsx # Formulario de contacto
 │   │   └── loading-screen.tsx # Pantalla de carga
 │   ├── hooks/               # Hooks personalizados
+│   │   ├── use-mobile.tsx   # Hook para detectar dispositivos móviles
+│   │   └── use-toast.ts     # Hook para notificaciones
 │   ├── lib/                 # Utilidades y helpers
+│   │   └── utils.ts         # Funciones de utilidad
 │   └── ai/                  # Integración con AI (Genkit)
+│       ├── genkit.ts        # Configuración de Genkit
+│       └── dev.ts           # Herramientas de desarrollo
+├── public/
+│   ├── favicon.svg          # Favicon principal
+│   ├── favicon-16x16.png    # Favicon 16x16
+│   ├── favicon-32x32.png    # Favicon 32x32
+│   ├── apple-touch-icon.png # Icono para Apple
+│   ├── chibi.png           # Avatar personalizado
+│   ├── site.webmanifest    # Manifest para PWA
+│   └── robots.txt          # Configuración de robots
 ├── docs/
 │   └── blueprint.md         # Documentación del diseño
 ├── tailwind.config.ts       # Configuración de Tailwind
 ├── next.config.ts          # Configuración de Next.js
-└── components.json         # Configuración de shadcn/ui
+├── components.json         # Configuración de shadcn/ui
+├── apphosting.yaml         # Configuración de hosting
+└── package.json            # Dependencias del proyecto
 ```
 
 ## 🎪 Características Especiales
@@ -215,6 +279,14 @@ SinFiltroBlog/
 - **Animaciones**: Efectos de hover y transiciones suaves
 - **Elementos Decorativos**: Líneas, badges y elementos visuales
 - **Contenido Expandible**: Desplegables con información completa de cada artículo
+
+### Sistema de Desplegables (Collapsibles)
+
+- **Artículos Completos**: Cada post tiene contenido expandible detallado
+- **Favoritos Interactivos**: Productos con descripciones completas y enlaces de compra
+- **Animaciones Suaves**: Transiciones fluidas al expandir/contraer
+- **Estado Persistente**: Mantiene el estado de apertura durante la sesión
+- **Componentes Radix UI**: Accesibilidad completa con Collapsible primitives
 
 ### Galería de Momentos
 
@@ -231,6 +303,14 @@ SinFiltroBlog/
 - **Elementos Flotantes**: Sparkles y corazones animados
 - **Overlay Elegante**: Texto "Sin Filtro" superpuesto sutilmente
 - **Optimización**: Carga prioritaria con Next.js Image component
+
+### Favicon Kawaii
+
+- **Diseño SVG**: Favicon vectorial que se ve perfecto en todas las resoluciones
+- **Estilo Kawaii**: Diseño adorable con gradientes rosa y elementos decorativos
+- **Sparkles Animados**: Elementos brillantes con efectos de cruz
+- **Iniciales "SF"**: Letras destacadas con tipografía moderna
+- **Optimización**: Configuración correcta para Next.js 13+ con `src/app/icon.svg`
 
 ### Interactividad
 
