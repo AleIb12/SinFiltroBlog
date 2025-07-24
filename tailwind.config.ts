@@ -10,9 +10,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['"PT Sans"', 'sans-serif'],
-        headline: ['Belleza', 'sans-serif'],
-        code: ['monospace'],
+        body: ['var(--font-press-start)', '"Press Start 2P"', 'Courier New', 'monospace'],
+        headline: ['var(--font-press-start)', '"Press Start 2P"', 'monospace'],
+        pixel: ['var(--font-press-start)', '"Press Start 2P"', 'Courier New', 'monospace'],
+        code: ['var(--font-press-start)', '"Press Start 2P"', 'Courier New', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -88,10 +89,49 @@ export default {
             height: '0',
           },
         },
+        'pixel-bounce': {
+          '0%, 100%': { 
+            transform: 'translateY(0px) scale(1)', 
+            opacity: '0.3' 
+          },
+          '25%': { 
+            transform: 'translateY(-16px) scale(1.1)', 
+            opacity: '0.6' 
+          },
+          '50%': { 
+            transform: 'translateY(-8px) scale(1)', 
+            opacity: '0.4' 
+          },
+          '75%': { 
+            transform: 'translateY(-24px) scale(1.2)', 
+            opacity: '0.8' 
+          },
+        },
+        'pixel-scroll': {
+          '0%': { 
+            backgroundPosition: '0 0, 8px 8px, 4px 4px, 0 0, 0 0' 
+          },
+          '100%': { 
+            backgroundPosition: '16px 16px, 24px 24px, 20px 20px, 8px 8px, 8px 8px' 
+          },
+        },
+        'pixel-glow': {
+          '0%': { 
+            transform: 'scale(1)', 
+            opacity: '0.5' 
+          },
+          '100%': { 
+            transform: 'scale(1.1)', 
+            opacity: '0.8' 
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'pixel-bounce': 'pixel-bounce 4s ease-in-out infinite',
+        'pixel-scroll': 'pixel-scroll 20s linear infinite',
+        'pixel-glow': 'pixel-glow 10s ease-in-out infinite alternate',
       },
     },
   },

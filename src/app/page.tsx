@@ -960,8 +960,8 @@ export default function Home() {
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
       <header className="py-8 px-4 md:px-8 bg-transparent backdrop-blur-sm sticky top-0 z-40">
         <div className="container mx-auto">
-          <div className="bg-card/60 backdrop-blur-sm border-2 border-dashed border-foreground/20 rounded-lg py-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-headline text-center text-primary tracking-wider">
+          <div className="pixel-border pixel-shadow bg-card/80 backdrop-blur-sm py-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-headline text-center text-primary tracking-wider pixel-text">
               Sin Filtro
             </h1>
           </div>
@@ -969,63 +969,64 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        <section id="introduction" className="container mx-auto px-4 py-16 text-center flex flex-col items-center floating-shapes soft-glow">
+        <section id="introduction" className="container mx-auto px-4 py-16 text-center flex flex-col items-center pixel-shapes pixel-glow">
           <div className="relative mb-8">
-            {/* Avatar elegante sin imagen */}
+            {/* Avatar pixel art kawaii */}
             <div className="relative w-48 h-48 mx-auto mb-6">
-              {/* Círculo exterior decorativo */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-accent/20 to-primary/10 animate-pulse"></div>
+              {/* Círculo exterior pixelado */}
+              <div className="absolute inset-0 pixel-border pixel-bg-pattern bg-primary/20 animate-pulse"></div>
 
-              {/* Círculo interior principal */}
-              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20 backdrop-blur-sm border-2 border-dashed border-primary/50">
-                <div className="absolute inset-4 rounded-full bg-gradient-to-br from-card via-card/90 to-card/80 backdrop-blur-sm border border-dashed border-accent/30 flex items-center justify-center overflow-hidden">
-                  {/* Avatar chibi */}
+              {/* Círculo medio pixelado */}
+              <div className="absolute inset-2 pixel-border pixel-inset bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20 backdrop-blur-sm">
+                <div className="absolute inset-4 pixel-border pixel-bg-pattern bg-gradient-to-br from-card via-card/90 to-card/80 backdrop-blur-sm flex items-center justify-center overflow-hidden">
+                  {/* Avatar chibi con rendering pixelado */}
                   <div className="w-full h-full flex items-center justify-center">
                     <Image
                       src="/chibi.png"
                       alt="Alisha Ibarra Bello - Avatar Chibi"
                       width={120}
                       height={120}
-                      className="rounded-full object-cover w-full h-full"
+                      className="pixel-border object-cover w-full h-full"
+                      style={{ imageRendering: 'pixelated' }}
                       priority
                     />
                   </div>
-                  {/* Overlay sutil con nombre */}
+                  {/* Overlay pixel con nombre */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-2 text-center">
-                    <div className="text-xs text-white font-medium tracking-wider uppercase">
+                    <div className="text-xs text-white font-medium tracking-wider uppercase pixel-text">
                       Sin Filtro
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Elementos decorativos flotantes */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center animate-bounce">
-                <Sparkles className="w-4 h-4 text-white" />
+              {/* Elementos decorativos pixel */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 pixel-border bg-gradient-to-br from-accent to-primary flex items-center justify-center animate-bounce">
+                <span className="text-white pixel-text text-sm">★</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center animate-pulse">
-                <Heart className="w-3 h-3 text-white" />
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 pixel-border bg-gradient-to-br from-primary to-accent flex items-center justify-center animate-pulse">
+                <span className="text-white pixel-text text-xs">♥</span>
               </div>
-              <div className="absolute top-4 -left-6 w-4 h-4 rounded-full bg-gradient-to-br from-accent/60 to-primary/60 animate-ping"></div>
-              <div className="absolute bottom-8 -right-6 w-5 h-5 rounded-full bg-gradient-to-br from-primary/60 to-accent/60 animate-ping" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-4 -left-6 w-4 h-4 pixel-border bg-gradient-to-br from-accent/60 to-primary/60 animate-ping"></div>
+              <div className="absolute bottom-8 -right-6 w-5 h-5 pixel-border bg-gradient-to-br from-primary/60 to-accent/60 animate-ping" style={{ animationDelay: '1s' }}></div>
             </div>
 
-            {/* Elementos decorativos adicionales */}
+            {/* Elementos decorativos pixel adicionales */}
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
               <div className="flex items-center gap-2 text-primary/30">
-                <div className="w-12 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
-                <span className="text-xs font-medium">✨</span>
-                <div className="w-12 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
+                <div className="w-12 h-1 pixel-bg-pattern bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
+                <span className="text-xs font-medium pixel-text">★</span>
+                <div className="w-12 h-1 pixel-bg-pattern bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
               </div>
             </div>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-headline mb-6 relative">
+          <h2 className="text-4xl md:text-5xl font-headline mb-6 relative pixel-text">
             <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               ¡Bienvenida a mi mundo!
             </span>
-            <span className="absolute text-5xl opacity-10 rotate-12 -top-4 -right-8 select-none">✨</span>
-            <span className="absolute text-3xl opacity-10 -rotate-12 -bottom-2 -left-6 select-none">💖</span>
+            <span className="absolute text-5xl opacity-20 rotate-12 -top-4 -right-8 select-none">★</span>
+            <span className="absolute text-3xl opacity-20 -rotate-12 -bottom-2 -left-6 select-none">♥</span>
           </h2>
 
           <div className="max-w-3xl mx-auto mb-8">

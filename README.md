@@ -1,22 +1,22 @@
-# 🌸 Sin Filtro Blog
+# � Sin Filtro Blog - Pixel Art Edition
 
-Un blog personal elegante y moderno enfocado en skincare, moda y vida nocturna. Construido con Next.js y diseñado sin filtros, con mucho estilo.
+Un blog personal completamente transformado con estilo pixel art kawaii. Combina la nostalgia retro de los videojuegos con contenido auténtico sobre skincare, moda y vida nocturna.
 
 > ✨ **Creado por Alisha Ibarra Bello** - Porque la vida es demasiado corta para vivir con filtros
 
-## ✨ Características Principales
+## 🎮 Características Pixel Art
 
-- 🎨 **Diseño Moderno**: Cartas rediseñadas sin imágenes que mantienen su atractivo visual
-- 📱 **Totalmente Responsive**: Experiencia perfecta en todos los dispositivos
-- 🏷️ **Contenido Categorizado**: Posts organizados por temas (Skincare, Moda, Fiesta)
-- 🎭 **Interfaz Elegante**: Gradientes, animaciones y transiciones suaves
-- 🌈 **Paleta de Colores Vibrante**: Rosa vibrante con acentos coral
-- 💫 **Componentes Interactivos**: Hover effects y animaciones micro-interactivas
-- 🔗 **Integración Social**: Enlaces a redes sociales (Instagram, WhatsApp, Telegram)
-- 📖 **Contenido Expandible**: Artículos completos con sistema de desplegables (collapsibles)
-- 💖 **Favoritos Interactivos**: Sección de productos favoritos con desplegables detallados
-- 🛍️ **Enlaces de Compra**: Integración con Amazon y otros retailers
-- 🎯 **Favicon SVG**: Favicon personalizado kawaii optimizado para todas las resoluciones
+- 🎨 **Diseño Retro-Kawaii**: Estética pixel art inspirada en videojuegos clásicos
+- 🔤 **Fuente Press Start 2P**: Tipografía auténtica de 8-bits para toda la interfaz
+- 📱 **Responsive Pixelado**: Experiencia pixel perfecta en todos los dispositivos
+- � **Elementos Cuadrados**: Sin bordes redondeados, mantiene la estética pixel pura
+- 🌈 **Paleta GameBoy**: Colores inspirados en consolas retro con toques kawaii
+- ✨ **Animaciones 8-bit**: Movimientos que evocan los videojuegos clásicos
+- 🔗 **Integración Social**: Enlaces estilizados con botones pixel art
+- 📖 **Contenido Expandible**: Sistema de collapsibles con estética retro
+- 💖 **Favoritos Pixelados**: Cards con elementos decorativos pixel art
+- 🛍️ **Enlaces de Compra**: Botones con estilo de videojuego retro
+- 🎯 **Favicon Pixel Art**: Icono SF completamente rediseñado en pixel art
 
 ## 🎯 Secciones del Blog
 
