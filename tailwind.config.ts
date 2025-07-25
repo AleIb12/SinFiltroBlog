@@ -10,10 +10,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['var(--font-press-start)', '"Press Start 2P"', 'Courier New', 'monospace'],
-        headline: ['var(--font-press-start)', '"Press Start 2P"', 'monospace'],
-        pixel: ['var(--font-press-start)', '"Press Start 2P"', 'Courier New', 'monospace'],
-        code: ['var(--font-press-start)', '"Press Start 2P"', 'Courier New', 'monospace'],
+        sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'ui-serif', 'Georgia', 'serif'],
+        headline: ['var(--font-playfair)', 'ui-serif', 'Georgia', 'serif'],
+        body: ['var(--font-inter)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',

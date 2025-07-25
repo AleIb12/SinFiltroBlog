@@ -958,10 +958,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-dvh bg-background text-foreground">
-      <header className="py-8 px-4 md:px-8 bg-transparent backdrop-blur-sm sticky top-0 z-40">
+      <header className="py-8 px-4 md:px-8 glass sticky top-0 z-40">
         <div className="container mx-auto">
-          <div className="pixel-border pixel-shadow bg-card/80 backdrop-blur-sm py-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-headline text-center text-primary tracking-wider pixel-text">
+          <div className="card py-6 text-center">
+            <h1 className="text-4xl md:text-5xl font-headline text-center gradient-text">
               Sin Filtro
             </h1>
           </div>
@@ -969,54 +969,51 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        <section id="introduction" className="container mx-auto px-4 py-16 text-center flex flex-col items-center pixel-shapes pixel-glow">
+        <section id="introduction" className="container mx-auto px-4 py-16 text-center flex flex-col items-center">
           <div className="relative mb-8">
-            {/* Avatar pixel art kawaii */}
+            {/* Avatar moderno y limpio */}
             <div className="relative w-48 h-48 mx-auto mb-6">
-              {/* Círculo exterior pixelado */}
-              <div className="absolute inset-0 pixel-border pixel-bg-pattern bg-primary/20 animate-pulse"></div>
+              {/* Círculo exterior moderno */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 animate-pulse"></div>
 
-              {/* Círculo medio pixelado */}
-              <div className="absolute inset-2 pixel-border pixel-inset bg-gradient-to-br from-primary/40 via-accent/30 to-primary/20 backdrop-blur-sm">
-                <div className="absolute inset-4 pixel-border pixel-bg-pattern bg-gradient-to-br from-card via-card/90 to-card/80 backdrop-blur-sm flex items-center justify-center overflow-hidden">
-                  {/* Avatar chibi con rendering pixelado */}
+              {/* Círculo medio con sombra */}
+              <div className="absolute inset-2 rounded-full bg-gradient-to-br from-primary/5 to-accent/5 shadow-lg">
+                <div className="absolute inset-4 rounded-full bg-card shadow-xl flex items-center justify-center overflow-hidden border-2 border-border/20">
+                  {/* Avatar */}
                   <div className="w-full h-full flex items-center justify-center">
                     <Image
                       src="/chibi.png"
-                      alt="Alisha Ibarra Bello - Avatar Chibi"
+                      alt="Alisha Ibarra Bello - Avatar"
                       width={120}
                       height={120}
-                      className="pixel-border object-cover w-full h-full"
-                      style={{ imageRendering: 'pixelated' }}
+                      className="rounded-full object-cover w-full h-full"
                       priority
                     />
                   </div>
-                  {/* Overlay pixel con nombre */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-2 text-center">
-                    <div className="text-xs text-white font-medium tracking-wider uppercase pixel-text">
+                  {/* Overlay con nombre */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-3 text-center rounded-b-full">
+                    <div className="text-sm text-white font-medium">
                       Sin Filtro
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Elementos decorativos pixel */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 pixel-border bg-gradient-to-br from-accent to-primary flex items-center justify-center animate-bounce">
-                <span className="text-white pixel-text text-sm">★</span>
+              {/* Elementos decorativos modernos */}
+              <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-primary flex items-center justify-center shadow-lg animate-bounce">
+                <span className="text-white text-xs">✨</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 pixel-border bg-gradient-to-br from-primary to-accent flex items-center justify-center animate-pulse">
-                <span className="text-white pixel-text text-xs">♥</span>
+              <div className="absolute -bottom-2 -left-2 w-5 h-5 rounded-full bg-accent flex items-center justify-center shadow-lg animate-pulse">
+                <span className="text-white text-xs">�</span>
               </div>
-              <div className="absolute top-4 -left-6 w-4 h-4 pixel-border bg-gradient-to-br from-accent/60 to-primary/60 animate-ping"></div>
-              <div className="absolute bottom-8 -right-6 w-5 h-5 pixel-border bg-gradient-to-br from-primary/60 to-accent/60 animate-ping" style={{ animationDelay: '1s' }}></div>
             </div>
 
-            {/* Elementos decorativos pixel adicionales */}
+            {/* Elementos decorativos limpios */}
             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-              <div className="flex items-center gap-2 text-primary/30">
-                <div className="w-12 h-1 pixel-bg-pattern bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
-                <span className="text-xs font-medium pixel-text">★</span>
-                <div className="w-12 h-1 pixel-bg-pattern bg-gradient-to-r from-transparent via-primary/40 to-transparent"></div>
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <div className="w-16 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+                <span className="text-xs font-medium">✨</span>
+                <div className="w-16 h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
               </div>
             </div>
           </div>

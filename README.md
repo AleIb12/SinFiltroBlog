@@ -1,22 +1,22 @@
-# � Sin Filtro Blog - Pixel Art Edition
+# ✨ Sin Filtro Blog - Modern Glassmorphism Edition
 
-Un blog personal completamente transformado con estilo pixel art kawaii. Combina la nostalgia retro de los videojuegos con contenido auténtico sobre skincare, moda y vida nocturna.
+Un blog personal con diseño moderno y elegante que combina efectos glassmorphism con gradientes sofisticados. Una experiencia visual contemporánea para contenido auténtico sobre skincare, moda y vida nocturna.
 
 > ✨ **Creado por Alisha Ibarra Bello** - Porque la vida es demasiado corta para vivir con filtros
 
-## 🎮 Características Pixel Art
+## � Características de Diseño Moderno
 
-- 🎨 **Diseño Retro-Kawaii**: Estética pixel art inspirada en videojuegos clásicos
-- 🔤 **Fuente Press Start 2P**: Tipografía auténtica de 8-bits para toda la interfaz
-- 📱 **Responsive Pixelado**: Experiencia pixel perfecta en todos los dispositivos
-- � **Elementos Cuadrados**: Sin bordes redondeados, mantiene la estética pixel pura
-- 🌈 **Paleta GameBoy**: Colores inspirados en consolas retro con toques kawaii
-- ✨ **Animaciones 8-bit**: Movimientos que evocan los videojuegos clásicos
-- 🔗 **Integración Social**: Enlaces estilizados con botones pixel art
-- 📖 **Contenido Expandible**: Sistema de collapsibles con estética retro
-- 💖 **Favoritos Pixelados**: Cards con elementos decorativos pixel art
-- 🛍️ **Enlaces de Compra**: Botones con estilo de videojuego retro
-- 🎯 **Favicon Pixel Art**: Icono SF completamente rediseñado en pixel art
+- ✨ **Glassmorphism**: Efectos de cristal con backdrop-blur y transparencias elegantes
+- 🌈 **Gradientes Sofisticados**: Paleta purple/pink con transiciones suaves
+- 🔤 **Tipografía Moderna**: Inter para texto y Playfair Display para títulos elegantes
+- 📱 **Responsive Elegante**: Experiencia fluida y moderna en todos los dispositivos
+- 🌟 **Animaciones Flotantes**: Movimientos suaves y sofisticados
+- � **Efectos de Hover**: Interacciones elegantes y micro-animaciones
+- 🔗 **Enlaces Glassmorphism**: Botones con efectos de cristal y sombras
+- 📖 **Contenido con Estilo**: Sistema de collapsibles con diseño contemporáneo
+- 💖 **Cards Modernas**: Tarjetas con glassmorphism y gradientes
+- 🛍️ **Botones Elegantes**: Estilo moderno con efectos visuales sofisticados
+- � **Favicon Moderno**: Icono SF con diseño contemporáneo
 
 ## 🎯 Secciones del Blog
 
@@ -108,7 +108,7 @@ El blog incluye artículos detallados sobre:
 - **Animaciones**: Tailwind CSS + CSS transitions
 - **Carousel**: Embla Carousel React
 - **Tipado**: TypeScript con modo estricto
-- **Fonts**: Google Fonts (Belleza + PT Sans)
+- **Fonts**: Google Fonts (Inter + Playfair Display)
 - **Favicon**: SVG optimizado para Next.js 13+
 - **Optimización**: Turbopack para desarrollo rápido
 - **AI Integration**: Google Genkit para funcionalidades futuras
@@ -163,23 +163,24 @@ npm run typecheck
 
 ### Colores Principales
 
-- **Primario**: Rosa vibrante (#FF69B4) - Personalidad divertida y energética
-- **Fondo**: Rosa muy claro (#FAF0E4) - Atmósfera suave e invitadora
-- **Acento**: Coral (#FF8071) - Botones de acción y destacados
-- **Texto**: Variaciones de gris para legibilidad óptima
+- **Primario**: Gradientes Purple/Pink (#8B5CF6 a #EC4899) - Moderna y sofisticada
+- **Fondo**: Degradado sutil con glassmorphism - Atmósfera elegante y contemporánea
+- **Acento**: Efectos glassmorphism con backdrop-blur - Elementos flotantes y cristalinos
+- **Texto**: Gradientes y sombras para profundidad visual óptima
 
 ### Tipografía
 
-- **Títulos**: 'Belleza' (sans-serif) - Personalidad en títulos
-- **Cuerpo**: 'PT Sans' (sans-serif) - Legibilidad y sensación moderna
+- **Títulos**: 'Playfair Display' (serif) - Elegancia clásica para encabezados
+- **Cuerpo**: 'Inter' (sans-serif) - Legibilidad moderna y clean
 
 ### Componentes de Diseño
 
-- Bordes punteados para un look casual
-- Gradientes sutiles en las cartas
-- Efectos de hover interactivos
-- Backdrop blur para elementos flotantes
-- Iconos temáticos para cada categoría
+- Efectos glassmorphism con backdrop-blur
+- Gradientes sofisticados purple/pink
+- Animaciones flotantes y suaves
+- Sombras modernas y profundidad visual
+- Iconos elegantes para cada categoría
+- Transiciones fluidas y micro-animaciones
 
 ## 📱 Responsive Design
 
@@ -273,12 +274,12 @@ SinFiltroBlog/
 
 ### Cartas Rediseñadas
 
-- **Sin Imágenes**: Diseño hermoso usando solo elementos CSS
-- **Iconos Temáticos**: Diferentes iconos para cada categoría
-- **Gradientes**: Fondos con gradientes sutiles
-- **Animaciones**: Efectos de hover y transiciones suaves
-- **Elementos Decorativos**: Líneas, badges y elementos visuales
-- **Contenido Expandible**: Desplegables con información completa de cada artículo
+- **Glassmorphism**: Diseño moderno usando efectos de cristal y blur
+- **Iconos Elegantes**: Elementos visuales sofisticados para cada categoría
+- **Gradientes Purple/Pink**: Fondos con degradados contemporáneos
+- **Animaciones Flotantes**: Efectos suaves y transiciones fluidas
+- **Elementos Glassmorphism**: Transparencias y efectos de cristal
+- **Contenido Expandible**: Desplegables con diseño moderno y elegante
 
 ### Sistema de Desplegables (Collapsibles)
 
@@ -304,11 +305,11 @@ SinFiltroBlog/
 - **Overlay Elegante**: Texto "Sin Filtro" superpuesto sutilmente
 - **Optimización**: Carga prioritaria con Next.js Image component
 
-### Favicon Kawaii
+### Favicon Moderno
 
 - **Diseño SVG**: Favicon vectorial que se ve perfecto en todas las resoluciones
-- **Estilo Kawaii**: Diseño adorable con gradientes rosa y elementos decorativos
-- **Sparkles Animados**: Elementos brillantes con efectos de cruz
+- **Estilo Contemporáneo**: Diseño elegante con gradientes modern y elementos sofisticados
+- **Elementos Glassmorphism**: Efectos de cristal con gradientes purple/pink
 - **Iniciales "SF"**: Letras destacadas con tipografía moderna
 - **Optimización**: Configuración correcta para Next.js 13+ con `src/app/icon.svg`
 
